@@ -19,9 +19,9 @@ export const AuthComponent = ({ children }) => {
                if (password === "password") {
                     setUser({ name: userName, isAuthenticated: true });
                     localStorage.setItem("user", JSON.stringify({ name: userName, isAuthenticated: true }));
-                    resolve("success");
+                    resolve("Inicio de sesión exitoso");
                } else {
-                    reject("Incorrect password");
+                    reject("Usuario o contraseña incorrecta");
                }
           });
      };
